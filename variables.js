@@ -5,21 +5,24 @@
   // agrega caminos
   let edad = parseInt(prompt("Por favor ingrese su edad:"));
 
-  if (isNaN(edad)) {
-    console.log("Error, ingreso no válido. Por favor ingrese un número válido.");
-  } else if (edad === 21) {
-    console.log("¡Bienvenido al bar y felicidades por llegar a la mayoría de edad!");
-    console.log("¿Sabías que tu edad es impar?");
-  } else if (edad % 2 !== 0) {
-    console.log("¿Sabías que tu edad es impar?");
-  }
+  if (edad >= 0) {
+    if (edad === 21) {
+      console.log("¡Bienvenido al bar y felicidades por llegar a la mayoría de edad!");
+    }
+    
+    if (edad % 2 !== 0) {
+      console.log("¿Sabías que tu edad es impar?");
+    }
   
-  if (edad >= 18 && edad < 21) {
-    console.log("Puede pasar al bar, pero no puede tomar alcohol.");
-  } else if (edad >= 21) {
-    console.log("Puede pasar al bar y tomar alcohol.");
+    if (edad < 18) {
+      console.log("No puede pasar al bar.");
+    } else if (edad < 21) {
+      console.log("Puede pasar al bar, pero no puede tomar alcohol.");
+    } else {
+      console.log("Puede pasar al bar y tomar alcohol.");
+    }
   } else {
-    console.log("No puede pasar al bar.");
+    console.log("Error, ingreso no válido. Por favor ingrese un número válido.");
   }
 
 //  totalAPagar
